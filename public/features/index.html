@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Features | Jen Starter</title>
+    <meta name="description" content="A nice way to create static websites" />
+    <meta name="theme-color" content="#236193">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- These are not Jen styles. They're just used for the carousel and can be removed if you want. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../../css/styles.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul class="nav">
+                <li class="nav__brand">Brand</li>
+                <li class="nav__item">
+                    <a href="/" class="nav__link" >Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/features/" class="nav__link nav__link_active"
+                        >Features</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/docs/" class="nav__link" >Documentation</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/admin/" class="nav__link" >Admin</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+<div class="features item container">
+  <div class="item__header">
+    <h1 class="item__name">Features</h1>
+  </div>
+  
+  <div class="alt">
+    <div class="alt__item alt__item_body">
+      <a href="/features/5d286987617119071aa78467">
+        <h2>Modular architecture</h2>
+      </a>
+      <p>
+        Jen Starter uses a combination of industry standard technologies to create modular, reusable components.TemplatingThrough the use of template inheritance, we can create child HTML components. In... <a href="/features/5d286987617119071aa78467">More</a>
+      </p>
+    </div>
+    <div class="alt__item alt__item_figure">
+      <a href="/features/5d286987617119071aa78467"><img class="alt__image" src="https://s3-ap-southeast-2.amazonaws.com/com.appyay/e/5d2715de3f2b6f0718952e4a/a/5d27fc6c3f2b6f0718952e60/w420"
+          alt="Modular architecture"></a>
+    </div>
+  </div>
+  
+  <div class="alt">
+    <div class="alt__item alt__item_body">
+      <a href="/features/5d286987617119071aa78468">
+        <h2>Easily customizable</h2>
+      </a>
+      <p>
+        Jen starter comes with a common set of tasks to run for development and optimize for production, but these tasks can be changed or removed to suit your needs and new tasks can be plugged in easily.Jen... <a href="/features/5d286987617119071aa78468">More</a>
+      </p>
+    </div>
+    <div class="alt__item alt__item_figure">
+      <a href="/features/5d286987617119071aa78468"><img class="alt__image" src="https://s3-ap-southeast-2.amazonaws.com/com.appyay/e/5d2715de3f2b6f0718952e4a/a/5d284abd3f2b6f0718952e65/w420"
+          alt="Easily customizable"></a>
+    </div>
+  </div>
+  
+  <div class="alt">
+    <div class="alt__item alt__item_body">
+      <a href="/features/5d286987617119071aa78469">
+        <h2>Built for rapid development</h2>
+      </a>
+      <p>
+        Jen makes it simple to take an HTML template and convert it into a dynamic data-driven static website. In fact, it will work out of the box if you copy and paste the HTML, CSS and Javascript into the... <a href="/features/5d286987617119071aa78469">More</a>
+      </p>
+    </div>
+    <div class="alt__item alt__item_figure">
+      <a href="/features/5d286987617119071aa78469"><img class="alt__image" src="https://s3-ap-southeast-2.amazonaws.com/com.appyay/e/5d2715de3f2b6f0718952e4a/a/5d27fc333f2b6f0718952e5b/w420"
+          alt="Built for rapid development"></a>
+    </div>
+  </div>
+  
+  <div class="attribution">Icons made by <a href="https://www.freepik.com/" title="Freepik" rel="noreferrer">Freepik</a>
+    from <a href="https://www.flaticon.com/" title="Flaticon" rel="noreferrer">www.flaticon.com</a> is licensed by
+    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"
+      rel="noreferrer">CC 3.0 BY</a>
+  </div>
+</div>
+</main>
+<footer>
+    <div class="container">
+        <p>Made with love by the folks at <a href="http://appyay.com" target="_blank" rel="noreferrer">Appyay</a></p>
+    </div>
+</footer>
+<!-- These are not Jen scripts. They're just used for the carousel and can be removed if you want. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<!-- Custom scripts -->
+<script src="../../js/bundle.min.js"></script>
+
+<script>console.log("Hi from Features");</script>
+
+<script>
+    if("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("../../sw.js").then(swReg => {}).catch(err => {
+                console.error('Service Worker Error', err);
+            });
+        });
+    }
+</script>
+</body>
+
+</html>

@@ -24,10 +24,6 @@ Or [download as a ZIP](https://github.com/appyay/jen-starter/archive/master.zip)
 ```
 npm install
 ```
-Because Jen is not yet on NPM, you'll need to install its packages as well:
-```
-cd jen && npm install && cd ../
-```
 
 ### 3. Run the development server
 ```
