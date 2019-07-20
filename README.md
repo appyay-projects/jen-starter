@@ -1,7 +1,7 @@
 # Jen Starter
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100)](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Finspiring-sammet-8f8ba9.netlify.com&tab=desktop)
 
-> A starter project for the [Jen static website generator](https://github.com/appyay/jen). The primary goal of the project is to facilitate rapid development of static websites.
+> A starter project for the [Jen static website generator](https://github.com/appyay/jen). The primary goal of the project is to facilitate rapid development of static websites. See it running on Netlify: [https://jen-starter.netlify.com](https://jen-starter.netlify.com).
 
 This project includes:
 * Sass preprocessing
