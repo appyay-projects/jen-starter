@@ -23,7 +23,7 @@ postcssProcessors = [
 ];
 
 // This is the only requirement for Jen. The other tasks in this file are optional.
-require('./jen/index.js')(gulp, {
+require('@richjava/jen')(gulp, {
   dataUrl: process.env.DATA_URL
 });
 
