@@ -1,0 +1,33 @@
+{% set page = { 
+    name: 'features',
+    title: 'Features' 
+  } %}
+
+{% include "layout/header/_header.html" %}
+<div class="features item container">
+  <div class="item__header">
+    <h1 class="item__name">{{db.features.contentType.pluralName}}</h1>
+  </div>
+  {% for feature in db.features.items %}
+  <div class="alt">
+    <div class="alt__item alt__item_body">
+      <a href="/features/{{feature.id}}">
+        <h2>{{feature.fields.title}}</h2>
+      </a>
+      <p>
+        {{feature.fields.body | striptags() | truncate(200)}} <a href="/features/{{feature.id}}">More</a>
+      </p>
+    </div>
+    <div class="alt__item alt__item_figure">
+      <a href="/features/{{feature.id}}"><img class="alt__image" src="{{feature.fields.image.sizes.w420}}"
+          alt="{{feature.fields.title}}"></a>
+    </div>
+  </div>
+  {% endfor %}
+  <div class="attribution">Icons made by <a href="https://www.freepik.com/" title="Freepik" rel="noreferrer">Freepik</a>
+    from <a href="https://www.flaticon.com/" title="Flaticon" rel="noreferrer">www.flaticon.com</a> is licensed by
+    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"
+      rel="noreferrer">CC 3.0 BY</a>
+  </div>
+</div>
+{% include "layout/footer/_footer.html" %}

@@ -1,0 +1,7 @@
+{
+    "app": {
+        "name": "Jen Starter",
+        "description": "A nice way to create static websites",
+        "pwaThemeColor": "#236193"
+    }
+}

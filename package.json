@@ -1,0 +1,37 @@
+{
+  "name": "jen-starter",
+  "description": "A starter project for Jen - a nice way to build static websites.",
+  "version": "1.0.0",
+  "author": "Richard Lovell",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appyay/jen"
+  },
+  "main": "public/index.html",
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "gulp",
+    "start": "build",
+    "build": "gulp build",
+    "load": "gulp jen:load --dataUrl",
+    "now-build": "npm run build"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.26.5",
+    "dotenv": "^7.0.0",
+    "dotenv-expand": "^5.1.0",
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-terser": "^1.1.7",
+    "gulp-util": "^3.0.8",
+    "postcss-scss": "^0.1.7",
+    "workbox-build": "^4.3.1"
+  },
+  "dependencies": {}
+}

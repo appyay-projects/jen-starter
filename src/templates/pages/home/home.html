@@ -1,0 +1,14 @@
+<!-- Front matter (the page variable can be accessed in any includes and partials) -->
+{% set page = { 
+    name: 'home',
+    title: 'Home' 
+} %}
+
+<!-- Header -->
+{% include "layout/header/_header.html" %}
+<!-- Partials -->
+{% block landing %}{% endblock %}
+{% block reviews %}{% endblock %}
+
+<!-- Footer -->
+{% include "layout/footer/_footer.html" %}

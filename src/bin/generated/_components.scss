@@ -1,0 +1,255 @@
+/*********
+Footer
+**********/
+
+footer {
+	background: #fff;
+	padding: 20px 0 40px 0;
+	border-top: 1px solid $light-gray;
+}
+/*********
+Header
+**********/
+
+.main-nav{
+	background-color: #fff;
+	box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+	position: relative;
+	 z-index: 2;
+}
+
+.nav{
+	display: flex;
+	justify-content: flex-end;
+	list-style: none;
+	padding: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+	&__brand {
+	margin-right: auto;
+	font-size: 1.4em;
+	color: $light-gray;
+	}
+	&__item {
+		display: block; 
+		height:30px;
+		line-height: 30px;
+		font-size: 1.4em;
+		margin-right: 20px;
+	}
+	&__link {
+		text-decoration: none;
+		display: inline-block;
+		color: $gray;
+		display: block;
+		transition: .3s background-color;
+	}   
+	&__link:hover {
+		color: #000;
+	}	
+	&__link_active {
+		color: $gray;
+		border-bottom: 2px solid $gray;
+		cursor: default;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.nav{
+		flex-direction: column;
+		&__item {
+			padding: 20px 0;
+		}
+	}
+}
+/******
+Admin
+*******/
+
+.admin {
+    height: calc(100vh - 74px);
+}
+
+.loader {
+    position: absolute;
+    top:90px;
+    left:20px;
+    height:700px;
+}
+/**************
+Documentation
+***************/
+
+.documentation {
+    background-color: #fff;
+    padding: 20px 60px 100px 60px;
+}
+
+@media only screen and (max-width: 600px) {
+	.documentation{
+		padding: 0 10px;
+	}
+}
+
+    
+/***********
+Features
+************/
+
+
+$min-width: 15rem;
+
+.features {
+	background-color: #fff;
+	padding: 20px 60px 20px 60px;
+	.attribution {
+		padding: 100px 0 0 0;
+		color: $gray;
+	}
+}
+
+//alternating layout 
+
+.alt {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: -1em;
+	margin-left: -3.5em;
+	align-items: center;
+	
+	&:not(:first-of-type) {
+	  margin-top: 3em;
+	}
+	&:nth-child(even) {
+	  flex-direction: row-reverse;
+	}
+	&__image {
+		max-width: 300px;
+		width: 60%;
+		margin: 0 20%;
+	}	
+	&__item {
+	  padding-top: 1em;
+	  padding-left: 3.5em;
+	}
+	&__item_body {
+		flex-grow: 9999;
+		flex-basis: $min-width;
+	} 
+	&__item_figure {
+		margin-right: auto;
+		flex-grow: 1;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.features {
+		padding: 0 10px 100px 10px;
+	}
+}
+
+/**************
+Features Detail
+***************/
+
+.detail {
+    background-color: #fff;
+    padding: 20px;
+    &__image {
+        width: 200px;
+        display: block;
+        margin: 30px auto 50px auto;
+    }
+    &__title {
+        margin-left: 20px;
+    }
+}
+/**************
+Landing section
+***************/
+
+.landing{
+	text-align: center;
+	padding: 200px 0 300px 0;
+	background-image: linear-gradient(to right bottom, #051937, #163b63, #236193, #298ac4, #29b6f6);
+	&__tagline {
+		color: #fff;
+		font-size: 1.6em;
+		font-weight: 200;
+	}
+}
+
+.jenbox {
+	border: 2px solid #fff;
+	padding: 1vw;
+	text-align: center;
+	display: inline-block;
+	margin-bottom: 20px;
+	&__jen {
+		font-size: 6vw;
+		color: $secondary-color;
+		margin: 0;
+	}
+	&__starter {
+		font-size: 3vw;
+		color: #fff;
+		margin: 0;
+		font-weight: 300;
+	}
+}
+
+.perf__badge {
+	margin-left: 10px;
+}
+/**************
+Reviews section
+***************/
+
+.reviews {
+	text-align: center;
+	overflow-x: hidden;
+	padding: 100px 0 200px 0;
+}
+
+.slider{
+	&__image {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+    	-webkit-box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);   
+	}
+	&__image img {
+		min-width: 100%;
+  		min-height: 100%;
+  		width: auto;
+  		height: auto;
+  		position: absolute;
+  		left: 50%;
+  		top: 50%;
+  		-webkit-transform: translate(-50%, -50%);
+  		-moz-transform: translate(-50%, -50%);
+  		-ms-transform: translate(-50%, -50%);
+  		transform: translate(-50%, -50%);
+	}
+	&__item {
+		max-width: 500px;
+		overflow: hidden;
+	}
+	&__quote {
+		font-size: 20px;
+		line-height: 1.4em;
+		color: $gray;
+	}
+	&__name {
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+	&__position {
+		color: $light-gray;
+		font-size: 14px;
+	}
+}

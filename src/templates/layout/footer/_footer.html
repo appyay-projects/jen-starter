@@ -1,0 +1,26 @@
+</main>
+<footer>
+    <div class="container">
+        <p>Made with love by the folks at <a href="http://appyay.com" target="_blank" rel="noreferrer">Appyay</a></p>
+    </div>
+</footer>
+<!-- These are not Jen scripts. They're just used for the carousel and can be removed if you want. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<!-- Custom scripts -->
+<script src="{{ page.name | path }}js/bundle.min.js"></script>
+{% if jen.page.hasScripts %}
+<script src="_{{jen.page.name}}.js" inline></script>
+{% endif %}
+<script>
+    if("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("{{ page.name | path }}sw.js").then(swReg => {}).catch(err => {
+                console.error('Service Worker Error', err);
+            });
+        });
+    }
+</script>
+</body>
+
+</html>

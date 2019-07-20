@@ -1,0 +1,15 @@
+{% set page = { 
+  name: 'docs',
+  title: 'Documentation' 
+  } %}
+  
+{% include "layout/header/_header.html" %}
+<div class="documentation item container">
+  <div class="item__header">
+    <h1 class="item__name">{{db.documentation.contentType.pluralName}}</h1>
+  </div>
+  <div>
+      {{db.documentation.fields.body | safe}}
+  </div>
+</div>
+{% include "layout/footer/_footer.html" %}

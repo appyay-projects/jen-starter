@@ -1,0 +1,13 @@
+/************
+Main Sass file
+*************/
+@import 'variables';
+@import 'reset';
+@import 'base';
+
+
+/**
+* Import component Sass. This is a concatenation of Sass files kept in the "templates" directory.
+* See the 'sass-components' gulp task in gulpfile.js.
+*/
+@import '../../bin/generated/components';
