@@ -79,17 +79,6 @@ Templates are stored in "src/templates". To create a template, create a file in 
 ### Pages
 Pages are added as sub-directories of the "pages" directory with an index.html file.
 
-### Includes
-To pull in another template, use the following syntax:
-
-```
-{% include "folder/file.html" %}
-```
-This is used to include the layout templates in each of the pages:
-````
-{% include "layout/_header.html" %}
-````
-
 ### Partials
 Partial files begin with an underscore and encapulate reusable components of a page. 
 
@@ -109,16 +98,22 @@ The partial can then be used in your page like so:
 ````
 {% block hello %}{% endblock %}
 ````
+### Layout templates
+The header and footer are included on each page through a Nunjucks include:
+
+````
+{% include "layout/_header.html" %}
+````
 
 ### Frontmatter
-The page object provides metadata about the page. It should be set at the top of every page HTML template file:
+The ```page``` object provides metadata about the page. It should be set at the top of every page HTML template file:
 ````
 {% set page = { 
 name: 'home', // page name
 title: 'Home' // title of page, used in layout/header/_header.html
 } %}
 ````
-These vaiables are used in the layout templates (_header.html and _footer.html). More properties can be added to this object as needed. 
+This object is used in the layout templates (_header.html and _footer.html). More properties can be added to this object as needed. 
 
 ## Master-detail pattern
 Jen enables facilitation of the master-detail pattern (i.e. list page and accompanying detail pages for each list item).
