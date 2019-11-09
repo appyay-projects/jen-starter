@@ -29,15 +29,15 @@
                         {% else %}class="nav__link" {% endif %}>Home</a>
                 </li>
                 <li class="nav__item">
-                    <a href="/features/" {% if 'features' in page.name %}class="nav__link nav__link_active"
+                    <a href="/features/page-1" {% if 'features' in page.name %}class="nav__link nav__link_active"
                         {% else %}class="nav__link" {% endif %}>Features</a>
                 </li>
                 <li class="nav__item">
-                    <a href="/docs/" {% if page.name == 'docs' %}class="nav__link nav__link_active"
+                    <a href="/docs" {% if page.name == 'docs' %}class="nav__link nav__link_active"
                         {% else %}class="nav__link" {% endif %}>Documentation</a>
                 </li>
                 <li class="nav__item">
-                    <a href="/admin/" {% if page.name == 'admin' %}class="nav__link nav__link_active"
+                    <a href="/admin" {% if page.name == 'admin' %}class="nav__link nav__link_active"
                         {% else %}class="nav__link" {% endif %}>Admin</a>
                 </li>
             </ul>

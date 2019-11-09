@@ -4,8 +4,8 @@
   } %}
   
 {% include "layout/header/_header.html" %}
-{% if db.meta.space.id %}
-<iframe class="admin" src="https://app.appyay.com?p={{db.meta.space.id}}" frameborder="0" height="100%"
+{% if jen.db.meta.project.id %}
+<iframe class="admin" src="https://app.appyay.com?p={{jen.db.meta.project.id}}" frameborder="0" height="100%"
   width="100%"></iframe>
 <div class="loader">Loading...</div>
 {% else %}

@@ -12,7 +12,8 @@
 {% if jen.page.hasScripts %}
 <script src="_{{jen.page.name}}.js" inline></script>
 {% endif %}
-<script>
+<!-- Uncomment if you want to use a service worker -->
+<!-- <script>
     if("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
             navigator.serviceWorker.register("{{ page.name | path }}sw.js").then(swReg => {}).catch(err => {
@@ -20,7 +21,7 @@
             });
         });
     }
-</script>
+</script> -->
 </body>
 
 </html>

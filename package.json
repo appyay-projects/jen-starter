@@ -8,6 +8,22 @@
     "type": "git",
     "url": "https://github.com/appyay/jen-starter.git"
   },
+  "keywords": [
+    "static",
+    "site",
+    "website",
+    "generator",
+    "starter",
+    "example",
+    "gulp",
+    "nunjucks",
+    "sass",
+    "components",
+    "bootstrap",
+    "pagination",
+    "netlify",
+    "s3"
+  ],
   "main": "public/index.html",
   "scripts": {
     "dev": "npm run serve",
@@ -16,6 +32,9 @@
     "build": "gulp build",
     "load": "gulp jen:load --dataUrl",
     "now-build": "npm run build"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -30,7 +49,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-terser": "^1.1.7",
     "gulp-util": "^3.0.8",
-    "@richjava/jen": "1.0.2",
+    "@richjava/jen": "1.0.5",
     "postcss-scss": "^0.1.7",
     "workbox-build": "^4.3.1"
   }

@@ -2,9 +2,9 @@
 
 {% block reviews %} 
 <section class="reviews item">
-	<h1 class="item__name">{{db.reviews.contentType.pluralName}}</h1>
+	<h1 class="item__name">{{jen.db.reviews.contentType.pluralName}}</h1>
 	  <div class="slider">  
-			{% for review in db.reviews.items %}
+			{% for review in jen.db.reviews.items %}
 			<div class="slider__item">
 			  <blockquote class="testimonial">
 				<p>&ldquo;{{review.fields.quote}}&rdquo;</p>

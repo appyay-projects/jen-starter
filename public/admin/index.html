@@ -1,0 +1,70 @@
+
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin | </title>
+    <meta name="description" content="" />
+    <meta name="theme-color" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- These are not Jen styles. They're just used for the carousel and can be removed if you want. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../../css/styles.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul class="nav">
+                <li class="nav__brand">Brand</li>
+                <li class="nav__item">
+                    <a href="/" class="nav__link" >Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/features/page-1" class="nav__link" >Features</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/docs" class="nav__link" >Documentation</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/admin" class="nav__link nav__link_active"
+                        >Admin</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+<p>Admin section goes here</p>
+
+<!-- Not including site footer on admin page -->
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="../../js/bundle.min.js"></script>
+<script>
+  document.querySelector('body').classList.add('full-height');
+  //Appyay will send a message when it's initializing
+  window.addEventListener('message', function (e) {
+    if (e.data.event === "appyayInit")
+      document.querySelector('.loader').style.display = 'none';
+  });
+
+  if("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+          navigator.serviceWorker.register("../../sw.js").then(swReg => {}).catch(err => {
+              console.error('Service Worker Error', err);
+          });
+      });
+  }
+</script>
+</body>
+</html>

@@ -1,20 +1,20 @@
 {% set page = { 
   name: 'features_detail',
-  title: item.fields.title
+  title: jen.item.fields.title
   } %}
 {% include "layout/header/_header.html" %}
 
 <div class="detail item container">
   <ul class="breadcrumbs">
-    <li><a href="/features">Features</a></li>
-    <li>{{item.fields.title}}</li>
+    <li><a href="/features/page-1">Features</a></li>
+    <li>{{jen.item.fields.title}}</li>
   </ul>
   <div class="detail__header">
-      <img class="detail__image" src="{{item.fields.image.sizes.w420}}" alt="{{item.fields.title}}">
-    <h1>{{item.fields.title}}</h1>
+      <img class="detail__image" src="{{jen.item.fields.image.sizes.w420}}" alt="{{jen.item.fields.title}}">
+    <h1>{{jen.item.fields.title}}</h1>
   </div>
   <div class="detail__body">
-     {{item.fields.body | safe}}
+     {{jen.item.fields.body | safe}}
   </div>
 </div>
 

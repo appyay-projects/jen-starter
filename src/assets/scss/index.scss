@@ -5,6 +5,8 @@ Main Sass file
 @import 'reset';
 @import 'base';
 
+@import "bootstrap/scss/bootstrap";
+
 
 /**
 * Import component Sass. This is a concatenation of Sass files kept in the "templates" directory.

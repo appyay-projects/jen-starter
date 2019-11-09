@@ -21,13 +21,21 @@ autoprefixer = require('autoprefixer'),
 postcssProcessors = [
   autoprefixer({ browsers: ['last 2 versions', 'ie > 10'] })
 ];
-
-// This is the only requirement for Jen. The other tasks in this file are optional.
-require('@richjava/jen')(gulp, {
-  dataUrl: process.env.DATA_URL
-});
-
 const browserSync = require('browser-sync').create();
+
+/**
+ * This is the only requirement for Jen, together with the Gulp tasks
+ * preceded with "jen:" (at the bottom of this file). The other Gulp tasks in this 
+ * file are optional.
+ */ 
+const itemsPerPage = 2;
+require('@richjava/jen')(gulp, {
+  dataUrl: process.env.DATA_URL,
+  itemsPerPage: itemsPerPage
+});
+/**
+ * End requirement for Jen.
+ */ 
 
 
 /**********
