@@ -20,16 +20,16 @@
    {% for i in range(jen.pagination.offset, upperRange) %}
   <div class="alt">
     <div class="alt__item alt__item_body">
-      <a href="/features/{{jen.db.features.items[i].id}}">
+      <a href="/features/{{jen.db.features.items[i].slug}}">
         <h2>{{jen.db.features.items[i].fields.title}}</h2>
       </a>
       <p>
         {{jen.db.features.items[i].fields.body | striptags() | truncate(200)}} <a
-          href="/features/{{jen.db.features.items[i].id}}">More</a>
+          href="/features/{{jen.db.features.items[i].slug}}">More</a>
       </p>
     </div>
     <div class="alt__item alt__item_figure">
-      <a href="/features/{{jen.db.features.items[i].id}}"><img class="alt__image"
+      <a href="/features/{{jen.db.features.items[i].slug}}"><img class="alt__image"
           src="{{jen.db.features.items[i].fields.image.sizes.w420}}" alt="{{jen.db.features.items[i].fields.title}}"></a>
     </div>
   </div>

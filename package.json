@@ -49,7 +49,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-terser": "^1.1.7",
     "gulp-util": "^3.0.8",
-    "@richjava/jen": "1.0.5",
+    "@richjava/jen": "1.0.7",
     "postcss-scss": "^0.1.7",
     "workbox-build": "^4.3.1"
   }

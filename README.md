@@ -1,17 +1,26 @@
 # Jen Starter
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100)](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Finspiring-sammet-8f8ba9.netlify.com&tab=desktop)
 
-> A starter project for the [Jen static website generator](https://github.com/appyay/jen). The primary goal of the project is to facilitate rapid development of static websites. See it running on Netlify: [https://jen-starter.netlify.com](https://jen-starter.netlify.com).
 
-This project includes:
+This is a starter project for the [Jen static website generator](https://github.com/appyay/jen). Jen is a lightweight Javascript library for rapid development of static websites. It was built with a focus on ease of use for developers and working seamlessly with headless APIs and static website hosting.
+
+> Jen was originally built to make putting a static website together from an existing HTML template can be an easy and intuitive process.
+
+Jen Starter includes a set of features to get you started, including: 
+
+* Page templating (using Nunjucks)
 * Sass preprocessing
-* Nunjucks/HTML for templating
 * CSS concatenation and minification
 * Javascript concatenation and uglification
 * Multi-browser live browser reload
 * Master-detail pattern
 * Pagination
+* Local data
+* Optional content management system (using Appyay Headless CMS)
+* Netlify configuration file
 * A modular, reusable design
+
+See it running on Netlify: [https://jen-starter.netlify.com](https://jen-starter.netlify.com).
 
 ## Getting Started
 ### 1. Clone this repository
