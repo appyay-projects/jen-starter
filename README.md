@@ -174,11 +174,13 @@ require('@richjava/jen')(gulp, {
 ````
 
 In your list template, you can loop through items in a range like so:
+
 ````
 {% for i in range(jen.pagination.offset, jen.pagination.offset + jen.pagination.itemsPerPage ) %}
     <h2>{{jen.db.features.items[i].fields.title}}</h2>
 {% endfor %}
 ````
+
 This project also includes a Bootrap pagination component located in the components directory of the templates folder. More components can be added in the same manner (using Nunjucks macros).
 
 ### Assets
