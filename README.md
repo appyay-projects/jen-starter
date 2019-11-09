@@ -91,7 +91,7 @@ The home folder (home page) contains two examples of partial components: landing
 Partial templates are HTML files that are preceded with an underscore, and they are defined with Nunjucks blocks:
 ````
 {% block greeting %} 
-<h2>Hi</h2>
+  <h2>Hi</h2>
 {% endblock %}
 ````
 The partial can then be used in your page like so:
@@ -109,8 +109,8 @@ The header and footer are included on each page through a Nunjucks include:
 The ```page``` object provides metadata about the page. It should be set at the top of every page HTML template file:
 ````
 {% set page = { 
-name: 'home', // page name
-title: 'Home' // title of page, used in layout/header/_header.html
+  name: 'home', // page name
+  title: 'Home' // title of page, used in layout/header/_header.html
 } %}
 ````
 This object is used in the layout templates (_header.html and _footer.html). More properties can be added to this object as needed. 
@@ -186,7 +186,8 @@ But note that you won't have control over source order, so component level style
 Javascript files can be added to the ````src/assets/js```` folder and will be concatenated into one file and uglified.
 
 #### Images
-Images can be added to the ````src/assets/images```` folder. This is an example of how to access an image:
+Images can be added to the ````src/assets/images```` folder. This is an example of how to access an image in a template:
+
 ````
-<img src="{{ page.path | path }}my-image.png" alt="My image"/>
+<img src="{{ page.path | path }}images/icons/apple-touch-icon.png" alt="My image"/>
 ````
