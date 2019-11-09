@@ -312,10 +312,11 @@ BUILD
 
 gulp.task('build-custom', gulp.series('scripts', 'images', 'webmanifest', 'sass', 'sass-components'));
 
-gulp.task('build', gulp.series('clean', 'build-custom', 'jen:build'));
+//Uncomment for if you are getting data from the local data directory
+//gulp.task('build', gulp.series('clean', 'build-custom', 'jen:build'));
 
 //Uncomment for if you are getting data from a remote data source
-//gulp.task('build', gulp.series('clean', 'build-custom', 'jen:build-remote'));
+gulp.task('build', gulp.series('clean', 'build-custom', 'jen:build-remote'));
 
 //Uncomment to use service worker (use with care - app will be heavily cached)
 // gulp.task('build', gulp.series('clean', 'build-custom', 'jen:build', 'service-worker'));
