@@ -32,11 +32,6 @@
           src="{{jen.db.features.items[i].fields.image.sizes.w420}}" alt="{{jen.db.features.items[i].fields.title}}"></a>
     </div>
   </div>
-  <!-- <h1 class="item__name">Offset: {{jen.pagination.offset}}</h1>
-  <h1 class="item__name">Current page: {{jen.pagination.currentPage}}</h1>
-  <h1 class="item__name">Total: {{jen.pagination.total}}</h1>
-  <h1 class="item__name">Items per page: {{jen.pagination.itemsPerPage}}</h1>
-  <h1 class="item__name">Upper range: {{(jen.pagination.total/jen.pagination.itemsPerPage) | round}}</h1> -->
   {% endfor %}
   
   {% call pagination.nav() %}

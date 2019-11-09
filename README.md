@@ -118,7 +118,7 @@ name: 'home', // page name
 title: 'Home' // title of page, used in layout/header/_header.html
 } %}
 ````
-More properties can be added to this object as needed. 
+These vaiables are used in the layout templates (_header.html and _footer.html). More properties can be added to this object as needed. 
 
 ## Master-detail pattern
 Jen enables facilitation of the master-detail pattern (i.e. a list pages and accompanying detail pages for each list item).
@@ -145,10 +145,10 @@ http://localhost:3000/features/abc123
 The item for display on the detail page can be accessed through the ```jen.item``` variable.
 
 ### List (master) templates
-The list template will be the ```index.html``` file in the root of the page folder. The items to needed to form the list can be accessed through the global ```db``` global variable. For example, in your list template:
+The list template will be the ```index.html``` file in the root of the page folder. The items to needed to form the list can be accessed through the global ```jen.db``` global variable. For example, in your list template:
 
 ````
-{% for feature in db.features.items %}
+{% for feature in jen.db.features.items %}
   <h2>{{feature.fields.title}}</h2>
 {% endfor %}
 ````
@@ -172,34 +172,10 @@ require('@richjava/jen')(gulp, {
 In your list template, you can loop through items in a range like so:
 ````
 {% for i in range(jen.pagination.offset, jen.pagination.offset + jen.pagination.itemsPerPage ) %}
-    <h2>{{db.features.items[i].fields.title}}</h2>
+    <h2>{{jen.db.features.items[i].fields.title}}</h2>
 {% endfor %}
 ````
 This project also includes a Bootrap pagination component located in the components directory of the templates folder. More components can be added in the same manner (using Nunjucks macros).
-
-In the list template, the pagination component is used like so:
-
-````
-{% call pagination.nav() %}
-  {% if jen.pagination.currentPage !== 1 %}
-    {{ pagination.previous(url = '/' + jen.page.name + '/page-' + (jen.pagination.currentPage - 1)) }}
-  {% else %}
-    {{ pagination.disabledPrevious() }}
-  {% endif %}
-  {% for page in range(1, jen.pagination.total/2) -%}
-    {% if jen.pagination.currentPage === page %}
-        {{ pagination.activeItem(page) }}
-    {% else %}
-        {{ pagination.nonActiveItem(page, '/' + jen.page.name + '/page-' + page) }}
-    {% endif %}
-  {%- endfor %}
-  {% if jen.pagination.currentPage != (jen.pagination.total/2) | round(0, "floor") %}
-    {{ pagination.next(url = '/' + jen.page.name + '/page-' + (jen.pagination.currentPage + 1)) }}
-  {% else %}
-    {{ pagination.disabledNext() }}
-  {% endif %}
-{% endcall %}
-````
 
 ### Assets
 #### Sass
