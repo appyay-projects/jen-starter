@@ -121,7 +121,7 @@ title: 'Home' // title of page, used in layout/header/_header.html
 These vaiables are used in the layout templates (_header.html and _footer.html). More properties can be added to this object as needed. 
 
 ## Master-detail pattern
-Jen enables facilitation of the master-detail pattern (i.e. a list pages and accompanying detail pages for each list item).
+Jen enables facilitation of the master-detail pattern (i.e. list page and accompanying detail pages for each list item).
 
 ### Detail pages
 The master-detail pattern (i.e. a list page and a detail page), is demonstrated in the features page folder:
