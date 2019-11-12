@@ -3,12 +3,10 @@
     name: 'home',
     title: 'Home' 
 } %}
+{% extends "layout/layout.html" %}
 
-<!-- Header -->
-{% include "layout/header/_header.html" %}
+{% block content %}
 <!-- Partials -->
 {% block landing %}{% endblock %}
 {% block reviews %}{% endblock %}
-
-<!-- Footer -->
-{% include "layout/footer/_footer.html" %}
+{% endblock %}

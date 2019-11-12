@@ -2,8 +2,10 @@
   name: 'features_detail',
   title: jen.item.fields.title
   } %}
-{% include "layout/header/_header.html" %}
 
+{% extends "layout/layout.html" %}
+
+{% block content %}
 <div class="detail item container">
   <ul class="breadcrumbs">
     <li><a href="/features/page-1">Features</a></li>
@@ -17,5 +19,4 @@
      {{jen.item.fields.body | safe}}
   </div>
 </div>
-
-{% include "layout/footer/_footer.html" %}
+{% endblock %}

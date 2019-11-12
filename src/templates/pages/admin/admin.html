@@ -2,17 +2,17 @@
   name: 'admin',
   title: 'Admin'
   } %}
-  
-{% include "layout/header/_header.html" %}
-{% if jen.db.meta.project.id %}
+
+{% extends "layout/layout.html" %}
+
+{% block content %}
+{% if jen.db.meta.space.id %}
 <iframe class="admin" src="https://app.appyay.com?p={{jen.db.meta.project.id}}" frameborder="0" height="100%"
   width="100%"></iframe>
 <div class="loader">Loading...</div>
 {% else %}
 <p>Admin section goes here</p>
 {% endif %}
-<!-- Not including site footer on admin page -->
-</main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="{{ page.name | path }}js/bundle.min.js"></script>
 <script>
@@ -22,14 +22,5 @@
     if (e.data.event === "appyayInit")
       document.querySelector('.loader').style.display = 'none';
   });
-
-  if("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-          navigator.serviceWorker.register("{{ page.name | path }}sw.js").then(swReg => {}).catch(err => {
-              console.error('Service Worker Error', err);
-          });
-      });
-  }
 </script>
-</body>
-</html>
+{% endblock %}

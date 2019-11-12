@@ -30,7 +30,8 @@ const browserSync = require('browser-sync').create();
  */ 
 const itemsPerPage = 2;
 require('@richjava/jen')(gulp, {
-  dataUrl: process.env.DATA_URL,
+  dataUrl: 'https://api.appyay.com/cd/v1/environments/5d2715de3f2b6f0718952e4a/items?apikey=JRIE23SQJ5OSGRR6I43GEM26OQZUYIZSOZRT4RLJMJNCUW3OEZGA',
+  // dataUrl: process.env.DATA_URL,
   itemsPerPage: itemsPerPage
 });
 /**

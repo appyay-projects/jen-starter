@@ -3,10 +3,11 @@
   title: 'Features' 
 } %}
 
+{% extends "layout/layout.html" %}
+
 {% import "components/pagination/_pagination.html" as pagination %}
 
-{% include "layout/header/_header.html" %}
-
+{% block content %}
 <div class="features item container">
   <div class="item__header">
     <h1 class="item__name">{{jen.db.features.contentType.pluralName}}</h1>
@@ -61,4 +62,4 @@
       rel="noreferrer">CC 3.0 BY</a>
   </div>
 </div>
-{% include "layout/footer/_footer.html" %}
+{% endblock %}

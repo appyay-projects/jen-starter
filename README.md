@@ -2,9 +2,9 @@
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100)](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Finspiring-sammet-8f8ba9.netlify.com&tab=desktop)
 
 
-This is a starter project for the [Jen static website generator](https://github.com/appyay/jen). Jen is a lightweight Javascript library for rapid development of static websites. It was built with a focus on ease of use for developers and working seamlessly with headless APIs and static website hosting.
+This is a starter project for the [Jen static website generator](https://github.com/appyay/jen). Jen is a lightweight Javascript library for rapid development of static websites. It was built with a focus on ease of use for developers and working seamlessly with headless content management systems.
 
-> Jen was originally built to make putting a static website together from an existing HTML template can be an easy and intuitive process.
+> Jen was originally built to make putting a static website together from an existing HTML template an easy and intuitive process.
 
 Jen Starter includes a set of features to get you started, including: 
 
@@ -108,10 +108,16 @@ The partial can then be used in your page like so:
 {% block hello %}{% endblock %}
 ````
 ### Layout templates
-The header and footer are included on each page through a Nunjucks include:
+Each page extends the layout template, so needs to include this:
 
 ````
-{% include "layout/_header.html" %}
+{% extends "layout/layout.html" %}
+````
+And the content should be wrapped with a content block:
+````
+{% block content %}
+    <p>My page content</p>
+{% endblock %}
 ````
 
 ### Frontmatter
@@ -119,10 +125,10 @@ The ```page``` object provides metadata about the page. It should be set at the 
 ````
 {% set page = { 
   name: 'home', // page name
-  title: 'Home' // title of page, used in layout/header/_header.html
+  title: 'Home' // title of page
 } %}
 ````
-This object is used in the layout templates (_header.html and _footer.html). More properties can be added to this object as needed. 
+This object is used in the layout template. More properties can be added to this object as needed. 
 
 ## Master-detail pattern
 Jen enables facilitation of the master-detail pattern (i.e. list page and accompanying detail pages for each list item).
@@ -132,12 +138,12 @@ The master-detail pattern (i.e. a list page and a detail page), is demonstrated 
 
 ````
 ...
-        |--pages
-        ...
-            |--features // page folder
-                |--detail //
-                    |--index.html // this is your detail page
-                |--index.html //this is your list (master) page
+    |--pages
+    ...
+        |--features // page folder
+            |--detail //
+                |--index.html // this is your detail page
+            |--index.html //this is your list (master) page
 ...
 ````
 
@@ -181,7 +187,7 @@ In your list template, you can loop through items in a range like so:
 {% endfor %}
 ````
 
-This project also includes a Bootrap pagination component located in the components directory of the templates folder. More components can be added in the same manner (using Nunjucks macros).
+This project also includes a Bootstrap pagination component located in the components directory of the templates folder. More components can be added in the same manner (using Nunjucks macros).
 
 ### Assets
 #### Sass
@@ -190,8 +196,7 @@ Sass files kept at a component level (in the templates directory) are automatica
 ````
 @import '../../bin/generated/components';
 ````
-But note that you won't have control over source order, so component level styles should be written so that they are encapsulated. If source order is imported to you, you should create Sass files in the src/assets/scss directory instead and import them manually into the main Sas file.
-
+But note that you won't have control over source order, so component level styles should be written so that they are encapsulated. If source order is imported to you, you should create Sass files in the src/assets/scss directory instead and import them manually into the main Sass file.
 
 #### Javascript
 Javascript files can be added to the ````src/assets/js```` folder and will be concatenated into one file and uglified.
