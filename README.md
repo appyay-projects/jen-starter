@@ -45,7 +45,8 @@ The website will be viewable at http://localhost:3000. On save of the project, o
 
 ### Data
 #### Loading data
-Dummy data of reviews, features and documentation is already included in the project. Data can be loaded in three ways:
+Data is kept in JSON formatDummy data of reviews, features and documentation is already included in the project. 
+Data can be loaded in three ways:
 1. Manually add a db.json file to the data folder.
 2. Load remote data by running ````npm load --dataUrl 'http://example.com/api/whatever'````
 3. Load remote data and build the project by running ````npm build````
@@ -192,14 +193,16 @@ This project also includes a Bootstrap pagination component located in the compo
 ### Assets
 #### Sass
 Sass files are stored in the ````src/assets/scss/```` directory and in the root of page directories. The root Sass file is ````src/assets/scss/index.scss````.
-Sass files kept at a component level (in the templates directory) are automatically compiled and are imported into the main Sass file:
+Sass files kept at a page/component level (in the templates directory) are automatically compiled and are imported into the main Sass file:
 ````
 @import '../../bin/generated/components';
 ````
-But note that you won't have control over source order, so component level styles should be written so that they are encapsulated. If source order is imported to you, you should create Sass files in the src/assets/scss directory instead and import them manually into the main Sass file.
+But note that you won't have control over source order, so page/component level styles should be written so that they are encapsulated. If source order is imported to you, you should create Sass files in the src/assets/scss directory instead and import them manually into the main Sass file.
 
 #### Javascript
-Javascript files can be added to the ````src/assets/js```` folder and will be concatenated into one file and uglified.
+Javascript files can be added to the ````src/assets/js```` folder and will be concatenated and uglified into ```public/js/bundled.min.js```.
+
+Javascript files can also be included at page/component level (for example ```_features.js```). This Javascript will be compiled into internal page Javascript rather than the external bundled JS file.
 
 #### Images
 Images can be added to the ````src/assets/images```` folder. This is an example of how to access an image in a template:
